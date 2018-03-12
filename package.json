@@ -1,0 +1,33 @@
+{
+	"name": "easy-interval",
+	"version": "0.0.0",
+	"description": "Intervals made easy",
+	"license": "MIT",
+	"repository": "jxom/easy-interval",
+	"author": {
+		"name": "jxom",
+		"email": "jakemoxey@gmail.com",
+		"url": "jxom.io"
+	},
+	"engines": {
+		"node": ">=8"
+	},
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		""
+	],
+	"dependencies": {},
+	"devDependencies": {
+		"ava": "^0.20.0",
+		"sinon": "4.4.3",
+		"xo": "^0.18.2"
+	},
+	"xo": {
+		"space": true
+	}
+}
