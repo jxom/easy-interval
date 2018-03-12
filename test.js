@@ -24,3 +24,20 @@ test.cb('stops correctly', t => {
     }, 2000);
   }, 3000);
 });
+
+test.cb('stop inside interval works correctly', t => {
+  const spy = sinon.spy();
+  let timesCalled = 0;
+  const interval = new Interval(({stop}) => {
+    spy();
+    if (timesCalled === 2) {
+      stop();
+    }
+    timesCalled++;
+  }, 1000);
+  interval.start();
+  setTimeout(() => {
+    t.true(spy.callCount === 3);
+    t.end();
+  }, 5000);
+});
