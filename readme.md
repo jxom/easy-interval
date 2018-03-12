@@ -56,13 +56,7 @@ The time period in milliseconds.
 
 ### Methods
 
-#### `Interval.start({stop})`
-
-##### stop
-
-type: `Function`
-
-Stops the interval.
+#### `Interval.start()`
 
 #### `Interval.stop()`
 
