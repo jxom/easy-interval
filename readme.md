@@ -25,12 +25,19 @@ setTimeout(interval.stop, 5000); // or `interval.stop();`
 With stopping inside of interval function:
 
 ```js
-const Interval = require('easy-interval');
+const axios = require('axios');
+const Interval = require('./');
 
-const interval = new Interval(({stop}) => {
-  console.log('hello world');
-  if (status === 'complete') {
-    stop();
+const interval = new Interval(async ({stop}) => {
+  try {
+    const {data} = await axios.get('https://store-api.io/transactions/1');
+    if (data.status === 'complete') {
+      console.log(data);
+      // Do stuff with `data`
+      stop();
+    }
+  } catch (err) {
+    console.error(err);
   }
 }, 1000);
 
