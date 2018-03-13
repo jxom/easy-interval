@@ -26,7 +26,7 @@ With stopping inside of interval function:
 
 ```js
 const axios = require('axios');
-const Interval = require('./');
+const Interval = require('easy-interval');
 
 const interval = new Interval(async ({stop}) => {
   try {
