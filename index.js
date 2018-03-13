@@ -8,8 +8,8 @@ class EasyInterval {
   }
 
   async callback() {
+    await this.fn({stop: this.stop.bind(this)});
     if (this.timer) {
-      await this.fn({stop: this.stop});
       this.start();
     }
   }

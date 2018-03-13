@@ -19,7 +19,14 @@
 		"index.js"
 	],
 	"keywords": [
-		""
+    "easy",
+    "simple",
+    "interval",
+    "setInterval",
+    "setTimeout",
+    "long",
+    "polling",
+    "poll"
 	],
 	"dependencies": {},
 	"devDependencies": {
